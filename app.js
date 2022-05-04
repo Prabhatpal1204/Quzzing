@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.set('layout', 'layouts/layout');
 app.use(expressLayout);
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
 
 const mongoose = require('mongoose');
 
@@ -31,4 +31,4 @@ db.once('open', () => console.log('Connected to Mongoose'));
 
 app.use('/', indexRoute);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
