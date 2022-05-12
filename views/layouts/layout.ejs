@@ -7,20 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/layout.css" />
+    <link href="../../public/css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../public/css/footer.css">
+    <link href="../../public/css/main1.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Irish+Grover&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet" />
+    <link href="../../public/css/main2.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/21de2f0bd7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis" />
+</head>
+
 </head>
 
 <body>
-    <section>
+    <div class="header">
         <%- include('../partials/header.ejs') -%>
-    </section>
+    </div>
 
-    <section>
+    <div class="main">
         <%- include('../Index') -%>
-    </section>
+    </div>
 
-    <section>
+    <div class="footer">
         <%- include('../partials/footer') -%>
-    </section>
+    </div>
 </body>
 
 </html>
