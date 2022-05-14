@@ -4,11 +4,25 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const app = express();
-const expressLayout = require('express-ejs-layouts');
-
+const morgan = require('morgan');
 const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
+const bodyParser = require('body-parser');
 
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header(
+//         'Access-Control-Allow-Headers',
+//         'Origin,X-Reuested-With,Content-Type,Accept,Authorization'
+//     );
+//     if (req.method === 'OPTIONS') {
+//         res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
+//         return res.status(200).json({});
+//     }
+// });
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 // app.set('layout', 'layouts/layout');

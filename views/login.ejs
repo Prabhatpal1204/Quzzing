@@ -5,10 +5,7 @@
     <title>Login V4</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/21de2f0bd7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" type="text/css" href="../public/css/login.css" />
 </head>
 
@@ -16,20 +13,20 @@
     <div class="limiter">
         <div class="container-login" style="background-image: url('../../public/images/bg-01.jpg')">
             <div class="wrap-login">
-                <form class="login-form validate-form">
+                <form class="login-form validate-form" id="reg-form">
                     <span class="login-form-title p-b-49"> Login </span>
 
                     <div class="wrap-input validate-input">
                         <span class="label-input">Username</span>
                         <i class="fa-solid fa-user" id="user-icon"></i>
-                        <input class="input" type="text" name="username" placeholder="Type your username" />
+                        <input class="input" type="text" id="username" name="username" placeholder="Type your username" />
                         <span class="focus-input" data-symbol="&#xf206;"></span>
                     </div>
 
                     <div class="wrap-input validate-input">
                         <span class="label-input">Password</span>
                         <i class="fa-solid fa-key" id="password-icon"></i>
-                        <input class="input" type="password" name="pass" placeholder="Type your password" />
+                        <input class="input" type="password" id="password" name="pass" placeholder="Type your password" />
                         <span class="focus-input" data-symbol="&#xf190;"></span>
                     </div>
 
@@ -47,8 +44,7 @@
             </div>
         </div>
     </div>
-
-    <div id="dropDownSelect1"></div>
+    <script src="../public/js/login.js"></script>
 </body>
 
 </html>
