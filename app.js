@@ -7,8 +7,10 @@ const app = express();
 const morgan = require('morgan');
 const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+var session = require('express-session');
+var MongoDBStore = require('connect-mongodb-session')(session);
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
 //     res.header(
@@ -28,8 +30,22 @@ app.set('views', __dirname + '/views');
 // app.set('layout', 'layouts/layout');
 // app.use(expressLayout);
 app.use('/public', express.static('public'));
-
-const mongoose = require('mongoose');
+const store = new MongoDBStore({
+    uri: process.env.DATABASE_URL,
+    collection: 'sessions'
+});
+app.use(
+    session({
+        secret: 'my secret',
+        resave: false,
+        saveUninitialized: false,
+        store: store
+    })
+);
+app.use((req, res, next) => {
+    res.locals.isAuthenticated = req.session.isLoggedIn;
+    next();
+});
 
 try {
     mongoose.connect(process.env.DATABASE_URL, {
@@ -47,4 +63,6 @@ db.once('open', () => console.log('Connected to Mongoose'));
 app.use('/', indexRoute);
 app.use('/users', usersRoute);
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, () => {
+    console.log('http://localhost:3000');
+});

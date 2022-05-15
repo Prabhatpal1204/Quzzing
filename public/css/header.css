@@ -10,6 +10,20 @@ header {
     align-self: center;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #c2d2e4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #0a4c95;
+}
+
 .logo {
     flex: 1;
     display: flex;
@@ -23,6 +37,10 @@ header {
     width: 100px;
     height: 70px;
     /* border: 1px solid black; */
+}
+
+.hidden {
+    display: none;
 }
 
 .nav {

@@ -14,41 +14,41 @@
         <div class="container-login" style="background-image: url('../../public/images/bg-01.jpg')">
             <div class="wrap-login">
                 <form class="login-form validate-form" id="reg-form">
-                    <span class="login-form-title p-b-49"> Login </span>
-
+                    <span class="login-form-title p-b-49"> SignIn </span>
                     <div class="wrap-input validate-input">
                         <span class="label-input">Username</span>
                         <i class="fa-solid fa-user" id="user-icon"></i>
-                        <input class="input" type="text" id="username" name="username" placeholder="Type your username" />
+                        <input class="input" type="text" id="username" autocomplete="off" name="username" placeholder="Type your username" />
+                        <span class="focus-input" data-symbol="&#xf206;"></span>
+                    </div>
+                    <div class="wrap-input validate-input">
+                        <span class="label-input">Email</span>
+                        <i class="fa-solid fa-user" id="user-icon"></i>
+                        <input class="input" type="text" id="email" name="username" placeholder="Type your username" autocomplete="off" />
                         <span class="focus-input" data-symbol="&#xf206;"></span>
                     </div>
 
                     <div class="wrap-input validate-input">
                         <span class="label-input">Password</span>
                         <i class="fa-solid fa-key" id="password-icon"></i>
-                        <input class="input" type="password" id="password" name="pass" placeholder="Type your password" />
+                        <input class="input" type="password" id="password" autocomplete="off" name="pass" placeholder="Type your password" />
                         <span class="focus-input" data-symbol="&#xf190;"></span>
                     </div>
 
-                    <div class="text-right">
-                        <a href="#"> Forgot password? </a>
-                    </div>
-                    <div class="text-right">
-                        New User
-                        <a href="/users/signup"><b>SignUp</b></a>
-                    </div>
+
 
                     <div class="container-login-form-btn">
                         <div class="wrap-login-form-btn">
                             <div class="login-form-bgbtn"></div>
-                            <button class="login-form-btn">Login</button>
+                            <button class="login-form-btn">SignUp</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="../public/js/login.js"></script>
+    <script src="../public/js/signup.js"></script>
 </body>
 
 </html>
+</!DOCTYPE>

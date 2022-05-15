@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 }
 
 footer {
+    scroll-behavior: smooth;
     background: #111;
     height: auto;
     font-family: 'Open Sans';
