@@ -46,6 +46,7 @@ hr {
     border-radius: 0.25em;
     background-color: aqua;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .item1 {

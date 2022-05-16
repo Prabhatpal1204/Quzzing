@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="../public/js/quiz.js" defer></script>
+    <link rel="stylesheet" href="../public//css/quiz.css" />
+</head>
+
+<body>
+    <button id="start" class="btn appear">Start Your <%= quiz.replace(quiz.charAt(0),quiz.charAt(0).toUpperCase()) %> </button>
+    <div class="wrapper hidden animate-container ">
+        <div class="circle circle-1"></div>
+        <div class="que-container">
+            <div class="image-back"></div>
+            <div class="que-con question-count">Question No</div>
+            <div class="que-con question animate-container "></div>
+            <div class="que-con answer-con">
+                <div class="que-con answer animate-container "><button class="btn btn-answer answer1" data-ans="a">Answer1</button class="btn"></div>
+                <div class="que-con answer animate-container"><button class="btn btn-answer answer2" data-ans="b">Answer2</button class="btn"></div>
+                <div class="que-con answer animate-container"><button class="btn btn-answer answer3" data-ans="c">Answer3</button class="btn"></div>
+                <div class="que-con answer animate-container"><button class="btn btn-answer answer4"  data-ans="d">Answer4</button class="btn"></div>
+            </div>
+        </div>
+        <div class="circle circle-2"></div>
+    </div>
+    <div class="result-wrapper hidden">
+        <h3 class="heading">Your Score</h3>
+        <div class="progress-warpper">
+            <div class="progress-element progress-element--html">
+                <div class="progress-container">
+                    <progress max="10" value="9" data-correct="50"></progress>
+                </div>
+            </div>
+        </div>
+        <p class="display-score">9/10</p><a href='/'>
+        <button class="btn result-btn">Continue</button></a>
+                </div>
+                <script src="script.js"></script>
+</body>
+
+</html>

@@ -7,9 +7,15 @@
         <div class="menu menu1"><a href="/">Home</a></div>
         <div class="menu menu2"><a href="#footer">Constact US</a></div>
         <div class="menu menu3"><a href="#second">Categories</a></div>
-        <div class="menu menu4 <% %>">
-            <a href="/users/login"><button class="btn">Login</button></a>
-        </div>
+        <% if(!isAuthenticated) {%>
+            <div class="menu menu4">
+                <a href="/users/login"><button class="btn">Login</button></a>
+            </div>
+            <% }else {%>
+                <div class="menu menu4">
+                    <button class="btn btn-logout" onClick="logout()">Logout</button>
+                </div>
+                <% } %>
     </div>
 </header>
 
@@ -19,3 +25,5 @@
         text-decoration: none;
     }
 </style>
+
+<script src="../../public/js/logout.js" defer></script>

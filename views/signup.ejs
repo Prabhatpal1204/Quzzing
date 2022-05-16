@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/21de2f0bd7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../public/css/login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 
 <body>
     <div class="limiter">
         <div class="container-login" style="background-image: url('../../public/images/bg-01.jpg')">
             <div class="wrap-login">
+                <div class="user-message hidden user-message--error">
+                    Not Valid
+                </div>
                 <form class="login-form validate-form" id="reg-form">
                     <span class="login-form-title p-b-49"> SignIn </span>
                     <div class="wrap-input validate-input">

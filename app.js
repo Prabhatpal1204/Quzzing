@@ -7,6 +7,7 @@ const app = express();
 const morgan = require('morgan');
 const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
+const quizRoute = require('./routes/quiz');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 var session = require('express-session');
@@ -62,6 +63,7 @@ db.once('open', () => console.log('Connected to Mongoose'));
 
 app.use('/', indexRoute);
 app.use('/users', usersRoute);
+app.use('/quiz', quizRoute);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('http://localhost:3000');
