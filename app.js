@@ -65,6 +65,4 @@ app.use('/', indexRoute);
 app.use('/users', usersRoute);
 app.use('/quiz', quizRoute);
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('http://localhost:3000');
-});
+app.listen(process.env.PORT || 3000);

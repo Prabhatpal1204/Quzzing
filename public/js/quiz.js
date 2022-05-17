@@ -19,7 +19,7 @@ const tag = tags.split(' ');
 // const container = document.querySelector('animate-conatianer');
 // console.log(answerColl);
 const url = `https://quizapi.io/api/v1/questions?apiKey=9Crh0SYQwk1sjO958Qm54tVdqXpNeWEo5R27y0KZ&limit=10&tags=${tag[2]}`;
-console.log(url);
+
 star.addEventListener('click', (e) => {
     fetch(url)
         .then((res) => {
@@ -35,7 +35,6 @@ star.addEventListener('click', (e) => {
             const correctAns = data.map((element) => {
                 return element.correct_answers;
             });
-            console.log(data);
             questionArr = [...question];
             answerArr = [...answers];
             correctAnsArry = [...correctAns];
@@ -147,8 +146,6 @@ document.querySelectorAll('.btn-answer').forEach((btn) => {
 // });
 
 const answerCheck = () => {
-    console.log(result);
-    console.log(currentAns);
     let count = 0;
     questionContainer.classList.add('hidden');
     results.classList.remove('hidden');
