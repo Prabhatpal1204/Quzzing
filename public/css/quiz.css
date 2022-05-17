@@ -147,7 +147,7 @@ body {
 
 .result-wrapper::before {
     content: '';
-    background: url('/SVG/undraw_bookmarks_re_mq1u.svg');
+    background: url('../images/undraw_bookmarks_re_mq1u.svg');
     background-size: 200px 200px;
     position: absolute;
     height: 200px;
