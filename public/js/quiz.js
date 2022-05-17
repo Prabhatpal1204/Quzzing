@@ -59,7 +59,23 @@ const createQuestions = (questions, answers, correctAns) => {
     question.innerHTML = questions[questionPointer];
 
     Array.from(answerColl).forEach((as) => {
-        as.innerText = answers[answerPointer][`answer_${ansArray[i]}`];
+        if (answers[answerPointer][`answer_${ansArray[i]}`] == null) {
+            as.innerText = 'None of the Above';
+        } else if (
+            answers[answerPointer][`answer_${ansArray[i]}`] == null &&
+            answers[answerPointer][`answer_${ansArray[i + 1]}`] == null
+        ) {
+            as.innerText = 'Both A and B';
+        } else {
+            if (answers[answerPointer][`answer_${ansArray[i]}`].length > 60) {
+                as.innerText = answers[answerPointer][`answer_${ansArray[i]}`].slice(
+                    0,
+                    60
+                );
+            } else {
+                as.innerText = answers[answerPointer][`answer_${ansArray[i]}`];
+            }
+        }
         ++i;
     });
 

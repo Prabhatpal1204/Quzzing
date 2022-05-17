@@ -64,5 +64,9 @@ db.once('open', () => console.log('Connected to Mongoose'));
 app.use('/', indexRoute);
 app.use('/users', usersRoute);
 app.use('/quiz', quizRoute);
+app.use((req, res, next) => {
+    res.status(404).render('pageNotfound');
+    next();
+});
 
 app.listen(process.env.PORT || 3000);
