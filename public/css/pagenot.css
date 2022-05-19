@@ -37,10 +37,6 @@ body {
     width: 400px;
 }
 
-button {
-    font-family: 'Nunito Sans';
-}
-
 h1 {
     font-size: 7.5em;
     margin: 15px 0px;
@@ -49,6 +45,10 @@ h1 {
 
 h2 {
     font-weight: bold;
+}
+
+button {
+    font-family: 'Nunito Sans';
 }
 
 .btn {

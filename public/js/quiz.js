@@ -16,6 +16,7 @@ let root = document.documentElement;
 const questionCount = document.querySelector('.question-count');
 const tags = star.innerHTML;
 const tag = tags.split(' ');
+const body = document.querySelector('body');
 // const container = document.querySelector('animate-conatianer');
 // console.log(answerColl);
 const url = `https://quizapi.io/api/v1/questions?apiKey=9Crh0SYQwk1sjO958Qm54tVdqXpNeWEo5R27y0KZ&limit=10&tags=${tag[2]}`;
@@ -50,6 +51,8 @@ const createQuestions = (questions, answers, correctAns) => {
     // console.log(answers);
     star.classList.remove('appear');
     star.classList.add('hidden');
+    body.classList.remove('apr');
+    body.classList.add('hide');
     var i = 0;
     questionContainer.classList.remove('hidden');
     questionContainer.classList.add('animation');

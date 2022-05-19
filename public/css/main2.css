@@ -145,3 +145,41 @@ hr {
         width: 80%;
     }
 }
+
+.odd {
+    opacity: 0;
+    animation-name: odd-come;
+    animation-timing-function: ease-in;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes odd-come {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.even {
+    opacity: 0;
+    animation-name: even-come;
+    animation-timing-function: ease-in;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes even-come {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
